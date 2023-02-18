@@ -45,6 +45,10 @@ class _UserScreenState extends State<UserScreen> {
               ),
               actions: [
                 TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    }, child: Text("Cancel",style: TextStyle(color: Colors.cyan),)),
+                TextButton(
                     onPressed: () {}, child: Text("Update"))
               ],
             );
