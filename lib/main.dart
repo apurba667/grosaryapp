@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grosaryapp/const/theme_data.dart';
+import 'package:grosaryapp/inner_screens/on_sale_screen.dart';
 import 'package:grosaryapp/provider/dark_theme_provider.dart';
 import 'package:grosaryapp/screens/bottom_bar_screen.dart';
 import 'package:grosaryapp/screens/categoris_screen.dart';
@@ -48,8 +49,11 @@ class _MyAppState extends State<MyApp> {
             debugShowCheckedModeBanner: false,
             title: 'Grosary App',
             theme: Styles.themeData(themeProvider.getDarkTheme, context),
-            home: BottomBarScreen());
+            home: BottomBarScreen(),
+            routes: {InnerOnsaleScreen.routeName : (context)=> const InnerOnsaleScreen()},
+        );
       }),
     );
+
   }
 }

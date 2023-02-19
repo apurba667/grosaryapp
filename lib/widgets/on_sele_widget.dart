@@ -72,7 +72,10 @@ class _OnSeleWidgetState extends State<OnSeleWidget> {
                   )
                 ],
               ),
-              PriceWidget(),
+              PriceWidget(isOnSale: true,
+                price: 4.5,
+                salePrice: 2.99,
+                textPrice: "1",),
               SizedBox(
                 height: 5,
               ),

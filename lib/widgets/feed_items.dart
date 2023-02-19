@@ -71,7 +71,15 @@ class _FeedsWidgetState extends State<FeedsWidget> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    PriceWidget(),
+                    Flexible(
+                      flex:2,
+                      child: PriceWidget(
+                        isOnSale: true,
+                        price: 4.5,
+                        salePrice: 2.99,
+                        textPrice: _quantityController.text,
+                      ),
+                    ),
                     SizedBox(
                       width: 5,
                     ),

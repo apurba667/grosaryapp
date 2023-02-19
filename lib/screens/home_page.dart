@@ -1,6 +1,8 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:grosaryapp/inner_screens/on_sale_screen.dart';
+import 'package:grosaryapp/servises/global_methods.dart';
 import 'package:grosaryapp/servises/utils.dart';
 import 'package:grosaryapp/widgets/feed_items.dart';
 import 'package:grosaryapp/widgets/on_sele_widget.dart';
@@ -27,7 +29,6 @@ class _HomePageState extends State<HomePage> {
     Size size = Utils(context).getScreenSize;
     final Color color = Utils(context).color;
     final Utils utils = Utils(context);
-    final themeData = utils.getTheme;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -51,7 +52,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  GlobalMethods.navigateTo(context: context, routeName: InnerOnsaleScreen.routeName);
+                },
                 child: Text(
                   "View All",
                   style: TextStyle(fontSize: 20),
@@ -118,6 +121,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             GridView.count(
+              padding: EdgeInsets.zero,
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               crossAxisCount: 2,
